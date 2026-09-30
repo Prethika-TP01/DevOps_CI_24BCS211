@@ -1,5 +1,5 @@
 import unittest
-from src.app import add
+from src.app import add, multiply
 
 
 class TestApp(unittest.TestCase):
@@ -10,7 +10,8 @@ class TestApp(unittest.TestCase):
         self.assertEqual(add(-2, -3), -5)
     def test_add_zero(self):
         self.assertEqual(add(0, 5), 5)
-
+    def test_multiply(self):
+        self.assertEqual(multiply(3, 4), 12)
 
 if __name__ == "__main__":
     unittest.main()
