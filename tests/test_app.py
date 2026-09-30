@@ -12,6 +12,8 @@ class TestApp(unittest.TestCase):
         self.assertEqual(add(0, 5), 5)
     def test_multiply(self):
         self.assertEqual(multiply(3, 4), 12)
+    def test_add_zero_and_negative_number(self):
+        self.assertEqual(add(0, -4), -4)
 
 if __name__ == "__main__":
     unittest.main()
