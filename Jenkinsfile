@@ -8,16 +8,16 @@ pipeline {
             }
         }
 
-        stage('Build') {
+       stage('Build') {
     steps {
-        bat '"C:/Users/Prethi/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe" --version'
-        bat '"C:/Users/Prethi/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe" src\\app.py'
+        bat '"C:\\Users\\Prethi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
+        bat '"C:\\Users\\Prethi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" src\\app.py'
     }
 }
 
 stage('Test') {
     steps {
-        bat '"C:/Users/Prethi/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe" -m unittest discover -s tests -v'
+        bat '"C:\\Users\\Prethi\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m unittest discover -s tests -v'
     }
 }
         stage('Result') {
