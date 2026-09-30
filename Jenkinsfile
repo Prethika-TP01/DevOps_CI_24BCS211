@@ -9,18 +9,17 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                bat 'python --version'
-                bat 'python src\\app.py'
-            }
-        }
+    steps {
+        bat '"C:/Users/Prethi/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe" --version'
+        bat '"C:/Users/Prethi/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe" src\\app.py'
+    }
+}
 
-        stage('Test') {
-            steps {
-                bat 'python -m unittest discover -s tests -v'
-            }
-        }
-
+stage('Test') {
+    steps {
+        bat '"C:/Users/Prethi/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/python.exe" -m unittest discover -s tests -v'
+    }
+}
         stage('Result') {
             steps {
                 echo 'Build and test stages completed.'
